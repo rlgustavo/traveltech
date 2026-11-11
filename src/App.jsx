@@ -6,6 +6,7 @@ function App(){
       <h1> Travel </h1>
       <p> Bem vindo ao meu site de Viagens </p>
       <p> Teste</p>
+      <p>Adicionar um novo paragrafo</p>
     </>
   )
 }
