@@ -1,44 +1,22 @@
-import { useState, useEffect } from "react";
-import { supabase } from "./supabase";
-import "./app.css";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
-  
-  const [ viagens, setViagens ] = useState( [] );
+import Header from "./components/Header";
 
-  useEffect( () => {
-      async function buscar() {
-        const { data, error } = await supabase.from("viagens").select("*");
+import Home from "./pages/Home";
 
-        if( error ) {
-          alert(" Erro ao Buscar Viagens no banco de dados ");
-        } else {
-          setViagens( data );
-        }
-      }
-
-      buscar();
-  } , [] );
-  
+function App(){
   return(
     <>
-      <header>
-          <h1> Travel Tech </h1>
-          <p> Viagens Disponiveis </p>
-      </header>
+      <BrowserRouter>
+            <Header />
 
-      <section className="lista">
-        {
-          viagens.map( ( viagem ) => (
-            <div key={ viagem.id } className="card">
-              <h3> Nome: {viagem.destino} </h3>
-              <p> R$ { viagem.preco } </p>
-              <button> Ver Viagem </button>
-            </div>
-          ))
-        }
-      </section>
+            <Routes>
+                <Route path="/" element={ <Home />}  />
 
+            </Routes>
+
+      </BrowserRouter>
     </>
   )
 }

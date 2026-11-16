@@ -1,0 +1,55 @@
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: #ffffff;
+  box-shadow: 0 20px 10px rgba(76, 149, 197, 0.1);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.menu {
+    display: flex;
+    gap: 50px;
+}
+
+.link {
+    color: rgb(227, 77, 229);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+}
+
+.link:hover{
+    color: blueviolet;
+    background: greenyellow;
+    border-radius: 8px;
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn-login {
+    color:blueviolet;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 20px 12px;
+}
+
+.btn-cadastro {
+    color: blueviolet;
+    background-color: rgb(201, 179, 222);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 12px 20px;
+    border-radius: 12px;
+}
